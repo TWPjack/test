@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <div id='div1'>
+  </div>
+  <script>
+
+
+    // function sayHelloName(name) {
+    //   alert("Hello, " + name);
+    // }
+
+    // // 呼叫 function
+    // sayHelloName("小明");
+
+
+    // function sayHelloString(name) {
+    //   let r = "Hello, " + name;
+    //   return r;
+    // }
+
+    // function even(num) {
+    //   if (num % 2 > 0) {
+
+    //     document.write(false);
+    //   } else {
+
+    //     document.write(true);
+    //   }
+    // }
+
+    // even(9);
+    // even(12);
+
+//     let Ming = {
+//     firstName:  "小明",
+//     lastName:  "王",
+//     sayHello() {
+//         alert("你好，我的名字叫 " + this.lastName + this.firstName);
+//     },
+// }
+
+// Ming.sayHello();
+
+
+// // 宣告類別
+// class Person {
+//   // constructor 是物件被建立時會執行的 function
+//   constructor(firstName, lastName) {
+//     this.firstName = firstName
+//     this.lastName = lastName
+//   }
+//   sayHello() {
+//     alert("你好，我的名字叫 " + this.lastName + this.firstName);
+//   }
+// }
+
+// let Ming = new Person("小明", "王");
+// let Mei = new Person("小美", "王");
+
+// Ming.sayHello();
+// Mei.sayHello();
+
+// let str = "  Hello World "
+// // 移除文字前後空白
+// str.trim();
+// // 文字轉大寫
+// str.toUpperCase();
+// // 文字轉小寫
+// str.toLowerCase();
+
+// // 是否有包含指定文字，回傳 true 或 false
+// let hello = "Hello, welcome to the world of Javascript";
+// // .includes(文字)
+// let strIncludesJS = str.includes("Javascript");
+// // .match(正則表達式)
+// let strMatchJS = str.match(/Javascript/ig);
+// // .indexOf(文字, 開始位置)，找出開始位置後第幾個字出現搜尋文字
+// let strindex = str.indexOf("Javascript");
+
+// // 取代文字
+// let xmas = "Xmas";
+// let xmasReplace = str.replace("Xmas", "Christmas");
+// let xmasReplaceRegex = str.replace(/xmas/ig, 'Christmas');
+
+// // 文字切割
+// // .substr(開始, 長度)
+// let greeting = "Hello my friend!";
+// let sub = greeting.substr(0, 5);
+// // .substring(開始位置, 結尾位置)
+// let sub2 = greeting.substring(6, 8);
+// // .slice(開始位置, 結尾位置)
+// // 可以放負數，代表倒數
+// let sub3 = greeting.slice(-7, -1);
+
+// // 文字轉數字或浮點
+// let strNumber = "123456";
+// let num = parseInt(strNumber);
+// let strFloat = "12345.67";
+// let float = parseFloat(strFloat);
+
+// // 如果將文字轉換成數字的話會發生什麼事?
+// let notNumber = "abcdefg";
+// let nan = parseInt(notNumber);
+// console.log(isNaN(nan));
+
+// // 文字轉成陣列
+// // .split(分割文字)
+// let alphabet = "a,b,c,d,e,f,g";
+// let alphabetArr = alphabet.split(",");
+
+
+
+// let firstNum = prompt("請輸入數字");
+// let secondNum = prompt("請再輸入數字");
+
+// let x = parseInt(firstNum);
+// let y = parseInt(secondNum);
+
+// if(isNaN(x) == true|| isNaN(y) == true){
+//   alert("請輸入數字");
+// }else if(isNaN(x) == false & isNaN(y) == false){
+//   z = x + y;
+//   alert(z);
+// }
+
+// // 陣列組成字串
+// // .join(連接文字)
+// let elements = ['Fire', 'Wind', 'Rain'];
+// elements.join("-");
+
+// // 在陣列後新增值
+// let days = ["星期一", "星期二"];
+// days.push("星期三");
+
+// // 刪除陣列索引並加入值，新值可以不加
+// // .splice(開始數字, 刪除數量, 新值1, 新值2...)
+// let fruits = ["Apple", "Banana", "Cherry"];
+// fruits.splice(1, 0, "Tomato");
+
+// // 陣列連接
+// let array1 = ['a', 'b', 'c'];
+// let array2 = ['d', 'e', 'f'];
+// let array3 = array1.concat(array2);
+
+// // 顛倒陣列
+// let numbers = ["1", "2", "3"];
+// numbers.reverse();
+
+// // 陣列是否有包含文字
+// arr.includes("abc");
+// // 陣列是否有包含文字，回傳索引
+// arr.indexOf("abc");
+
+// // .map() 可以運算陣列的每個值後產生新的陣列
+// let numbers1 = [1,2,3,4];
+// numbers1 = numbers1.map(num => {
+//   return num*2
+// })
+
+// // .filter() 可以過濾陣列後產生新的陣列
+// // true 代表保留，false 代表刪除
+// let numbers2 = [100,200,300,400];
+// numbers2 = numbers2.filter(num => {
+//   return num > 200
+// })
+
+// // .reduce() 可以累加陣列每個元素
+// // .reduce(function, 初始值)
+// const arr = [1, 2, 3, 4];
+// const reducer = (accumulator, currentValue) => {
+//   return accumulator + currentValue
+// }
+// console.log(array1.reduce(reducer));     // 1 + 2 + 3 + 4 = 10 
+// console.log(array1.reduce(reducer, 5));  // 5 + 1 + 2 + 3 + 4 = 15
+
+// // 排序陣列，預設是依第一個字排，順序是數字1~9，大寫 A~Z，小寫 A~Z
+// let letters = ["a", "c", "b", "d"];
+// letters.sort();
+
+// // 數字小到大
+// // .sort 裡面的 function 會迴圈跑過每個值，一次兩個
+// // 第一次跑第 1 2 個
+// // 第二次跑第 2 3 個
+// // a 指的是後面的，b 指的是前面的
+// // return < 0 ，a會排在b前面
+// // return = 0 ，a b順序不變
+// // return > 0 ，a會排在b後面。
+// let nums = [100,400,300,500,120,90,10000];
+// let ascnum = nums.sort((a,b)=>{
+//   console.log(a,b,a-b);
+//   return a-b;
+// })
+
+// // 數字大到小
+// let descnum = nums.sort((a,b)=>{
+//   return b-a;
+// })
+
+// // 排序中文
+// let ChineseNum = ["三", "一", "四", "二"];
+// ChineseNum.sort((a, b)=>{
+//   // localeCompare 可以依語言字碼排序文字
+//   // 如果 a 在 b 之前為 -1，相反則為 1，相等為 0
+//   return a.localeCompare(b, "zh-Hant-TW");
+// })
+
+// let str = prompt("請輸入");
+
+
+// document.write(str.trim().split("").reverse().join(''));
+
+// let str = prompt("請輸入");
+
+// str.split("");
+// let t = "";
+
+// for(i = 0; i < str.length; i++){
+
+// if(str.substring(i, i + 1) == str.substring(i, i + 1).toUpperCase()){
+//   t += str.substring(i, i + 1).toLowerCase();
+// }
+// if(str.substring(i, i + 1) == str.substring(i, i + 1).toLowerCase()){
+//  t += str.substring(i, i + 1).toUpperCase();
+// }
+
+// }
+
+// document.write(t);
+
+// a = Math.random()*100;
+// document.write(Math.round(a));
+
+// const rand = (min, max) => {
+
+// return  Math.floor(Math.random()*(max-min+1))+min;
+
+// }
+// document.write(rand(78,96));
+
+
+// function loter(x){
+//     let n = 0;
+//     let all = [];
+//     for(i = 0; i < 6; i++ ){
+//         n = rand(1,38);
+        
+//         if(all.includes(n) == true){
+//           i -= 1;
+//           continue;
+//         }else if(all.includes(n) == false){
+//             all.push(n);
+//         }
+//     }
+//     document.write(`A區 ${all} <br>`);
+//     document.write(`B區 ${rand(1, 8)}`);
+
+// }
+
+// loter();
+
+
+// let timer = setInterval(()=>{
+//     document.write("Hi");
+// }, 1000)
+
+// setTimeout(()=>{
+//     clearInterval(timer);
+// }, 10000)
+
+// let second = prompt("輸入秒數數字");
+// let timer = setInterval(()=>{
+//     document.write(`<p>剩餘${second -= 1}秒</p>`);
+
+// }, 1000)
+
+
+
+
+
+// setTimeout(()=>{
+//     clearInterval(timer);
+//     document.write(`<p style="color:red;">時間到</p>`);
+// }, second * 1000)
+
+//設定倒數秒數
+let second = prompt("輸入秒數數字");
+let t = "";
+
+//顯示倒數秒收
+function showTime()
+{
+    second -= 1;
+    document.getElementById('div1').innerHTML= t;
+    t = `<p style='color:blue;'>剩餘 ${second} 秒</p>`
+    if(second==0)
+    {
+        t = "<p style='color:red;'>時間到</p>";
+        
+    }
+    if(second == -1){
+      clearInterval(showtime());
+    }
+    
+    //每秒執行一次,showTime()
+    setTimeout("showTime()",1000);
+}
+
+//執行showTime()
+showTime();
+</script>
+
+
+  </script>
+</body>
+
+</html>
